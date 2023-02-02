@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%# <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,4 +18,16 @@
 </form>
   
 </body>
-</html>
+</html> %>
+
+<% if false %>
+<%= form_tag("/users", method: "post") do %>
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field(:user, :username) %>
+    <%= label_tag(:email, "Email:") %>
+  <%= email_field(:user, :email) %>
+    <%= label_tag(:password, "Password:") %>
+  <%= password_field(:user, :password) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+<% end %>
